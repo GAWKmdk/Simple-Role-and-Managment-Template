@@ -1,0 +1,59 @@
+<template name="services">
+ <h1>Subscription Plans</h1>
+    <hr>
+    
+    <div class="container">
+        <div class=" row ">
+    
+            <div class="five column">
+            {{#each plans }}
+    <br>
+         <div class=" plan">
+        
+            <h4>{{plan_name}}</h4>
+            
+            <p style=" font-size: 12px;">{{description}}</p>
+             <p style="font-size: 16px">{{plan_role}}</p>
+            <div class="price"><b>{{price}}</b><br> For <br> <b>{{plan_days}} Days</b></div><br>
+            
+            
+            <a class="button button-primary buy-plan" id="{{_id}}" rel="{{plan_name}}">In-App Upgrade</a> 
+            
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+<!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="**merchant_id goes here**">
+
+    <!-- Specify a Subscribe button. -->
+    <input type="hidden" name="cmd" value="_xclick-subscriptions">
+    <!-- Identify the subscription. -->
+                
+                <!-- ** These may require another package to sanbox outside of Meteor since they are calling local collections and data is not stored in the browser or server --> 
+                
+    <input type="hidden" name="item_name" value="{{plan_name}}">
+    <input type="hidden" name="item_number" value="{{plan_label}}">
+
+    <!-- Set the terms of the regular subscription. -->
+    <input type="hidden" name="currency_code" value="GBP">
+    <input type="hidden" name="a3" value="{{price}}">
+    <input type="hidden" name="p3" value="{{plan_days}}">
+                <!-- <D>day <W>week <Y>year --> 
+    <input type="hidden" name="t3" value="<D>">
+
+    <!-- Set recurring payments until canceled. -->
+    <input type="hidden" name="src" value="1">
+
+    <!-- Display the payment button. -->
+    <input type="image" name="submit"
+    src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/btn_subscribe_113x26.png"
+    alt="Subscribe">
+    <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
+        </div> 
+       <hr>
+    {{/each}}
+             </div>   </div>
+    </div>
+   
+</template>

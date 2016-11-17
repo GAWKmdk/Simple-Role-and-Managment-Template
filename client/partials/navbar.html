@@ -1,0 +1,23 @@
+<template name="navbar">
+<h2>Simple Navbar with Access Controls</h2>
+    <p>** Depending on your role status [ Admin/Public/Server ] you will see a blue button for your current Alert **</p>
+    
+    {{#if isInRole 'admin'}}
+    <a href="#" class="button button-primary">For Admin Only</a>
+    {{else}}
+    <a href="#" class="button button-default">For Admin Only</a>
+    {{/if}}
+    
+    {{#if isInRole ['public','']}}
+    <a href="#" class="button button-primary">For Public Only</a>
+    {{else}}
+    <a href="#" class="button button-primary">For Public Only</a>
+    {{/if}}
+    
+    {{#if isInRole 'exec'}}
+    <a href="#" class="button button-primary">For Server Only</a>
+    {{else}}
+    <a href="#" class="button button-default">For Server Only</a>
+    {{/if}}
+    
+</template>

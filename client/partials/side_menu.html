@@ -1,0 +1,39 @@
+<template name="side_menu">
+    
+        <div class="side_menu">
+    <div class="container" style="text-align:center;font-size:12px;">
+        <br>
+        <h5>Welcome </h5>
+     {{> loginButtons}}
+     </div>
+    <hr>
+    
+    {{#if isInRole 'admin'}}
+    
+            <a class="button button{{#if currentRoute 'addServicePlan'}}-primary{{/if}}" href="/admin/listplans/addplan" align="center" >Add a Plan</a>
+     <hr> 
+            
+     <a class="button button{{#if currentRoute 'listsubscribers'}}-primary{{/if}}" href="/admin/listsubscribers" align="center">View Users</a>
+     <br>
+     <a class="button button{{#if currentRoute 'listservices'}}-primary{{/if}}" href="/admin/listplans" align="center" >View In-App Plans</a>
+     <br>
+       
+        {{else}}
+        
+        <a class="button button{{#if currentRoute 'landing'}}-primary{{/if}}" href="/" align="center" >View In-App Plans</a>
+            <br>
+            {{#if currentUser}}
+             <a class="button button{{#if currentRoute 'yourPlans'}}-primary{{/if}}" href="/subscriptions/yourplans" align="center" >View Your Plans</a>
+            <br>
+            {{/if}}
+            
+            
+    
+    {{/if}}
+    
+    
+        
+            
+    </div>
+
+</template>

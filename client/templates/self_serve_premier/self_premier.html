@@ -1,0 +1,35 @@
+<template name="your_plans">
+<h1>Your Active Plans</h1>
+    <hr>
+    
+    <table class="u-full-width">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Duration</th>
+      <th>Price</th>
+       <th>Role</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+      
+      {{#each userplans}}
+    <tr>
+      <td>{{plan_name}}</td>
+      <td>{{plan_days}} Days</td>
+      <td>{{plan_price}}</td>
+        <td>{{plan_role}} A</td>
+      <td>
+          <!-- might wanna add if plan == free cant be cancelled and if plan_name == plan_name -->
+          <a class="button button-danger cancel-plan" href="#">Cancel</a>
+          <a class="button button-primary" href="/">Update</a>
+        </td>
+    </tr>
+      {{/each}}
+    
+      
+  </tbody>
+</table>
+    
+</template>

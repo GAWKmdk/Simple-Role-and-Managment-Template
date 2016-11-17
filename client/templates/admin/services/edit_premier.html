@@ -1,0 +1,71 @@
+<template name="editplan">
+<h1>Edit an existing Subscription Plan</h1>
+ <hr>
+   <form class="edit-plan-form">
+    
+       <div class="row">
+    <div class="twelve columns">       
+       <label>Plan Title: </label>
+        <input type="text" class="u-full-width" placeholder="Subscription Plan (i-tap-i18n) eg: A1-Tier Package" name="plan_name" id="plan_name" value="{{plan_name}}">
+       </div>
+           </div>
+      
+       <div class="row">
+    <div class="twelve columns">       
+       <label>Plan Label: (Meta_Slug)</label>
+        <input type="text" class="u-full-width" placeholder="Label (i-tap-i18n) eg: special_interest_channel" name="plan_label" id="plan_label" value="{{plan_label}}">
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="twelve columns">       
+       <label>Days: (Duration)</label>
+        <input type="text" class="u-full-width" placeholder="Length of Plan in Days (i-tap-i18n) eg: 127 days" name="plan_days" id="plan_days" value="{{plan_days}}">
+       </div>
+    </div>
+       
+        <div class="row">
+       <div class="twelve columns">       
+       <label>Price: (Currency)</label>
+        <input type="text" class="u-full-width" placeholder="Subscription Price Per (i-tap-i18n) eg: £14.99" name="price" id="price" value="{{price}}">
+       </div>
+    </div>
+       
+       <div class="row">
+       <div class="twelve columns">       
+       <label>Description: </label>
+           <textarea class="u-full-width" placeholder="Description of Plan (i-tap-i18n) " name="description" id="description" value="{{description}}"></textarea>
+       </div>
+    </div>
+       
+       <div class="row">
+       <div class="twelve columns">       
+       <label>Role: </label>
+           <select class="u-full-width" id="plan_role" name="plan_role">
+        <option value="public" {{selectedStats "public" }}>public</option>
+         <option value="ai" {{selectedStats "ai" }}>ai</option>
+         <option value="client" {{selectedStats "client"}}>client</option>
+         <option value="server" {{selectedStats "server"}}>server</option>
+         <option value="exec" {{selectedStats "exec"}} >exec</option>
+         <option value="admin" {{selectedStats "admin"}} >admin</option>
+           
+        </select>
+       </div>
+    </div>
+       
+       <div class="row">
+       <div class="twelve columns">       
+       <label>Promotion Plan ? </label>
+        <select class="u-full-width" id="is_defacto" name="is_defacto">
+            
+            <!-- Use for survey {{ checkValue 0 is_defacto}} --> 
+        <option value="0" {{checkValue 0 is_defacto}}>No</option>
+        <option value="1" {{checkValue 1 is_defacto}}>Yes</option>
+       
+        </select>
+       </div>
+    </div>
+       <input class="button-primary" type="submit" value="submit">
+    </form>
+    
+</template>

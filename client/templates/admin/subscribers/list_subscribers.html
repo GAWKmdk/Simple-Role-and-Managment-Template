@@ -1,0 +1,36 @@
+<template name="list_subscribers">
+<h1>Current Subscribers</h1>
+<hr>
+    
+    <table class="u-full-width">
+  <thead>
+    <tr>
+      
+      <th>User Email</th>
+      <th>Role</th>
+      <th>Plan</th>
+      <th>Joined</th>
+      <th>Expires</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      {{#each subscribers}}
+    <tr>
+     
+      <td>{{user_email}}</td>
+      <td>{{plan_role}}</td>
+      <td>{{plan_name}} </td>
+      <td>{{formatDate join_date}}</td>
+      <td>{{getEndDate join_date plan_duration}}</td>
+        <!-- If role == allow this to prevent single2image abuse --> 
+      <td><a href="#" class="cancel-subscription button button-danger">Cancel</a></td>    
+        
+    </tr>
+      {{/each}}
+      
+  </tbody>
+</table>
+    
+</template>
