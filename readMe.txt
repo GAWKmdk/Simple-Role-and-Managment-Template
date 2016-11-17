@@ -14,7 +14,7 @@ Functioning Role and Subscription Management Template
 - Expire dates don't neccessarly display correctly because the browser is doing var somethingfunny with the .toDateString(). So it won't format the parse duration + days to the existing start date of a subscription and instead gives you an encrypted output that you can discover clues to if you wish to know where the time went ! 
 
 
-##Things you can do: 
+##Things you can do/view: 
 
 Start up RoboMongo and see the collections;
 - 6 types of roles tied to 6 generic users
@@ -41,3 +41,7 @@ or
 
 - Create a general account.
 - Upgrade or cancel subscription //test out the paypal subscription button without sandbox id (put that in the business/merchant section of the button html) after getting yourself a sandbox dev id. 
+
+
+Built on getskeleton.com/ framework. 
+
