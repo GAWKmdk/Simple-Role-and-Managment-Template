@@ -1,5 +1,15 @@
 Functioning Role and Subscription Management Template
 
+
+![role-management](https://cloud.githubusercontent.com/assets/23016977/21370612/66e80dd6-c704-11e6-981d-f6147ad3d4d4.jpg)
+![role-management2](https://cloud.githubusercontent.com/assets/23016977/21370614/68460552-c704-11e6-8aa5-b31d18e74813.jpg)
+![role-management3](https://cloud.githubusercontent.com/assets/23016977/21370616/699e4266-c704-11e6-98e1-e1f56d5aefb2.jpg)
+![role-management4](https://cloud.githubusercontent.com/assets/23016977/21370617/6b5cb164-c704-11e6-8c2e-99375961abcb.jpg)
+![role-management5](https://cloud.githubusercontent.com/assets/23016977/21370619/6d557244-c704-11e6-8190-7ba99498cdd8.jpg)
+![role-management6](https://cloud.githubusercontent.com/assets/23016977/21370620/6ef06866-c704-11e6-8d11-20a8e0ee08ad.jpg)
+![role-management7](https://cloud.githubusercontent.com/assets/23016977/21370623/70f49696-c704-11e6-8ccd-76e5e087a84f.jpg)
+
+
 ##Includes
 - login/sign-up
 - Administrative featured: Generate/Edit/Delete subscriptions, View all users, View all subscriptions
